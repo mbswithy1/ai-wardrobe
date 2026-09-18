@@ -1,0 +1,16 @@
+{
+  "name": "ai-wardrobe",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI 循环衣橱 - AI 穿搭租赁 Web MVP",
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:web": "npm --prefix web run dev",
+    "dev": "concurrently -n server,web -c blue,green \"npm run dev:server\" \"npm run dev:web\"",
+    "build": "npm --prefix server run build && npm --prefix web run build",
+    "test": "npm --prefix server run test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
