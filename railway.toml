@@ -1,0 +1,11 @@
+# Railway 部署配置
+# 项目根即为服务根目录；构建用 build.sh，启动指向 server/dist/index.js
+
+[build]
+# Railway 默认会执行 package.json 的 build 脚本；
+# 我们在根 package.json 的 build 里已包含前端+后端构建
+
+[deploy]
+startCommand = "node server/dist/index.js"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 120
